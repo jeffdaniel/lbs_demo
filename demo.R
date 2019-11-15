@@ -15,7 +15,10 @@ library(spatstat)
 # Load simulated data, consisting of two objects:
 #    - X, a spatial point pattern,
 #    - data, a list of five pixel images serving as spatial covariates.
-load("data.Rda")
+load("data/X.Rda")
+load("data/data1.Rda")
+load("data/data2.Rda")
+data <- as.imlist(c(data1, data2))
 
 # Create a binary image mask covering the spatial domain.
 mask <- as.mask(data[[1]])
